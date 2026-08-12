@@ -3,46 +3,167 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Assistance — Cali</title>
+  <title>Support — Cali</title>
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
-    h1, h2 { line-height: 1.25; }
-    h2 { margin-top: 2rem; }
+    :root {
+      --ink: #1a2e1a;
+      --muted: #5c6b5c;
+      --bg: #f7f4ef;
+      --card: #ffffff;
+      --accent: #2f6b3a;
+      --accent-soft: #e8f2ea;
+      --border: #d9e0d6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: linear-gradient(180deg, #eef6ef 0%, var(--bg) 180px);
+    }
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+      margin: 0 0 28px;
+      padding: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(26, 46, 26, 0.06);
+    }
+    .lang-switch button {
+      flex: 1;
+      border: 0;
+      border-radius: 12px;
+      padding: 16px 12px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      background: transparent;
+      color: var(--muted);
+      transition: background .15s ease, color .15s ease, transform .1s ease;
+    }
+    .lang-switch button:hover { background: var(--accent-soft); color: var(--accent); }
+    .lang-switch button.active {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(47, 107, 58, 0.28);
+    }
+    .lang-switch button:active { transform: scale(0.98); }
+    h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 12px; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.7rem; }
+    p, li { color: var(--ink); }
+    .muted { color: var(--muted); }
+    a { color: var(--accent); font-weight: 600; }
+    [data-lang] { display: none; }
+    html[lang="fr"] [data-lang="fr"],
+    html[lang="en"] [data-lang="en"] { display: block; }
+    html[lang="fr"] li[data-lang="fr"],
+    html[lang="en"] li[data-lang="en"] { display: list-item; }
   </style>
 </head>
 <body>
-  <h1>Assistance Cali</h1>
-  <p>Besoin d’aide avec Cali, le compteur de calories ? Nous sommes là pour vous.</p>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" id="btn-fr" aria-pressed="true">Français</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
+  </div>
 
-  <h2>Nous contacter</h2>
-  <p>Écrivez-nous à :</p>
-  <p><a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a></p>
-  <p>Indiquez si possible :</p>
-  <ul>
-    <li>le modèle de votre téléphone (iPhone / Android)</li>
-    <li>la version de l’application</li>
-    <li>une description claire du problème</li>
-  </ul>
-  <p>Nous répondons généralement sous quelques jours ouvrés.</p>
+  <div data-lang="fr">
+    <h1>Assistance Cali</h1>
+    <p class="muted">Besoin d’aide avec Cali, le compteur de calories ? Nous sommes là pour vous.</p>
 
-  <h2>Abonnements et achats</h2>
-  <ul>
-    <li><strong>iPhone :</strong> les abonnements sont gérés via l’App Store. Vous pouvez les modifier ou les annuler dans Réglages → [votre nom] → Abonnements.</li>
-    <li><strong>Android :</strong> les abonnements sont gérés via Google Play. Vous pouvez les modifier ou les annuler dans Play Store → Profil → Paiements et abonnements.</li>
-    <li>Pour restaurer un achat déjà effectué, utilisez le bouton <strong>Restaurer les achats</strong> dans les réglages de l’application.</li>
-  </ul>
+    <h2>Nous contacter</h2>
+    <p>Écrivez-nous à :</p>
+    <p><a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a></p>
+    <p>Indiquez si possible :</p>
+    <ul>
+      <li>le modèle de votre téléphone (iPhone / Android)</li>
+      <li>la version de l’application</li>
+      <li>une description claire du problème</li>
+    </ul>
+    <p>Nous répondons généralement sous quelques jours ouvrés.</p>
 
-  <h2>Questions fréquentes</h2>
-  <p><strong>Comment ajouter un repas ?</strong><br />
-  Utilisez le bouton d’ajout, puis scannez une photo, un code-barres, ou décrivez votre repas à la voix.</p>
+    <h2>Abonnements et achats</h2>
+    <ul>
+      <li><strong>iPhone :</strong> les abonnements sont gérés via l’App Store. Vous pouvez les modifier ou les annuler dans Réglages → [votre nom] → Abonnements.</li>
+      <li><strong>Android :</strong> les abonnements sont gérés via Google Play. Vous pouvez les modifier ou les annuler dans Play Store → Profil → Paiements et abonnements.</li>
+      <li>Pour restaurer un achat déjà effectué, utilisez le bouton <strong>Restaurer les achats</strong> dans les réglages de l’application.</li>
+    </ul>
 
-  <p><strong>Mes données sont-elles sauvegardées en ligne ?</strong><br />
-  Non : repas, profil et poids restent sur votre appareil. Cali n’a pas de compte utilisateur ni de base de données centrale. Seules certaines données techniques nécessaires (abonnement, analyse IA ponctuelle, statistiques) peuvent être traitées par des services tiers. Voir notre <a href="./privacy.html">politique de confidentialité</a>.</p>
+    <h2>Questions fréquentes</h2>
+    <p><strong>Comment ajouter un repas ?</strong><br />
+    Utilisez le bouton d’ajout, puis scannez une photo, un code-barres, ou décrivez votre repas à la voix.</p>
 
-  <p><strong>Comment supprimer mes données ?</strong><br />
-  Cali ne stocke pas vos données sur un serveur. Désinstallez simplement l’application pour supprimer les données présentes sur votre téléphone. Pour annuler un abonnement, gérez-le dans l’App Store ou Google Play.</p>
+    <p><strong>Mes données sont-elles sauvegardées en ligne ?</strong><br />
+    Non : repas, profil et poids restent sur votre appareil. Cali n’a pas de compte utilisateur ni de base de données centrale. Seules certaines données techniques nécessaires (abonnement, analyse IA ponctuelle, statistiques) peuvent être traitées par des services tiers. Voir notre <a href="./privacy.html">politique de confidentialité</a>.</p>
 
-  <h2>Politique de confidentialité</h2>
-  <p><a href="./privacy.html">Lire la politique de confidentialité</a></p>
+    <p><strong>Comment supprimer mes données ?</strong><br />
+    Cali ne stocke pas vos données sur un serveur. Désinstallez simplement l’application pour supprimer les données présentes sur votre téléphone. Pour annuler un abonnement, gérez-le dans l’App Store ou Google Play.</p>
+
+    <h2>Politique de confidentialité</h2>
+    <p><a href="./privacy.html">Lire la politique de confidentialité</a></p>
+  </div>
+
+  <div data-lang="en">
+    <h1>Cali Support</h1>
+    <p class="muted">Need help with Cali, the calorie counter? We’re here for you.</p>
+
+    <h2>Contact us</h2>
+    <p>Email us at:</p>
+    <p><a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a></p>
+    <p>Please include if possible:</p>
+    <ul>
+      <li>your phone model (iPhone / Android)</li>
+      <li>the app version</li>
+      <li>a clear description of the issue</li>
+    </ul>
+    <p>We usually reply within a few business days.</p>
+
+    <h2>Subscriptions & purchases</h2>
+    <ul>
+      <li><strong>iPhone:</strong> subscriptions are managed through the App Store. Change or cancel them in Settings → [your name] → Subscriptions.</li>
+      <li><strong>Android:</strong> subscriptions are managed through Google Play. Change or cancel them in Play Store → Profile → Payments & subscriptions.</li>
+      <li>To restore a previous purchase, use <strong>Restore purchases</strong> in the app settings.</li>
+    </ul>
+
+    <h2>FAQ</h2>
+    <p><strong>How do I add a meal?</strong><br />
+    Tap the add button, then scan a photo, a barcode, or describe your meal by voice.</p>
+
+    <p><strong>Is my data stored online?</strong><br />
+    No: meals, profile, and weight stay on your device. Cali has no user accounts and no central database. Only some technical data required to run the app (subscription, one-off AI analysis, analytics) may be processed by third parties. See our <a href="./privacy.html">privacy policy</a>.</p>
+
+    <p><strong>How do I delete my data?</strong><br />
+    Cali does not store your data on a server. Simply uninstall the app to remove data from your phone. To cancel a subscription, manage it in the App Store or Google Play.</p>
+
+    <h2>Privacy policy</h2>
+    <p><a href="./privacy.html">Read the privacy policy</a></p>
+  </div>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem("cali-lang");
+      var lang = stored === "en" || stored === "fr" ? stored : (navigator.language || "").toLowerCase().startsWith("fr") ? "fr" : "en";
+      function setLang(next) {
+        lang = next;
+        document.documentElement.lang = next;
+        localStorage.setItem("cali-lang", next);
+        var fr = document.getElementById("btn-fr");
+        var en = document.getElementById("btn-en");
+        fr.classList.toggle("active", next === "fr");
+        en.classList.toggle("active", next === "en");
+        fr.setAttribute("aria-pressed", next === "fr" ? "true" : "false");
+        en.setAttribute("aria-pressed", next === "en" ? "true" : "false");
+        document.title = next === "fr" ? "Assistance — Cali" : "Support — Cali";
+      }
+      document.getElementById("btn-fr").addEventListener("click", function () { setLang("fr"); });
+      document.getElementById("btn-en").addEventListener("click", function () { setLang("en"); });
+      setLang(lang);
+    })();
+  </script>
 </body>
 </html>

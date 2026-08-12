@@ -3,66 +3,222 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Politique de confidentialité — Cali</title>
+  <title>Privacy Policy — Cali</title>
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
-    h1, h2 { line-height: 1.25; }
-    h2 { margin-top: 2rem; }
+    :root {
+      --ink: #1a2e1a;
+      --muted: #5c6b5c;
+      --bg: #f7f4ef;
+      --card: #ffffff;
+      --accent: #2f6b3a;
+      --accent-soft: #e8f2ea;
+      --border: #d9e0d6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: linear-gradient(180deg, #eef6ef 0%, var(--bg) 180px);
+    }
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+      margin: 0 0 28px;
+      padding: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(26, 46, 26, 0.06);
+    }
+    .lang-switch button {
+      flex: 1;
+      border: 0;
+      border-radius: 12px;
+      padding: 16px 12px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      background: transparent;
+      color: var(--muted);
+      transition: background .15s ease, color .15s ease, transform .1s ease;
+    }
+    .lang-switch button:hover { background: var(--accent-soft); color: var(--accent); }
+    .lang-switch button.active {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(47, 107, 58, 0.28);
+    }
+    .lang-switch button:active { transform: scale(0.98); }
+    h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 12px; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.7rem; }
+    .muted { color: var(--muted); }
+    a { color: var(--accent); font-weight: 600; }
+    [data-lang] { display: none; }
+    html[lang="fr"] [data-lang="fr"],
+    html[lang="en"] [data-lang="en"] { display: block; }
+    html[lang="fr"] li[data-lang="fr"],
+    html[lang="en"] li[data-lang="en"] { display: list-item; }
   </style>
 </head>
 <body>
-  <h1>Politique de confidentialité de Cali</h1>
-  <p><em>Dernière mise à jour : 1 juillet 2026</em></p>
-  <p>Cali (compteur de calories et régime) respecte votre vie privée. Cette politique explique quelles données peuvent être collectées, pourquoi elles sont utilisées et quels sont vos droits.</p>
-  <h2>Données collectées</h2>
-  <p>L’application peut collecter ou traiter les données suivantes :</p>
-  <ul>
-    <li><strong>Informations de profil :</strong> âge, sexe, taille, poids, objectif de poids, niveau d’activité, habitudes et objectif calorique.</li>
-    <li><strong>Données nutritionnelles :</strong> repas ajoutés, aliments, calories, protéines, glucides, lipides et historique des repas.</li>
-    <li><strong>Données de poids :</strong> pesées enregistrées et progression dans le temps.</li>
-    <li><strong>Photos ou audios :</strong> lorsque vous utilisez les fonctionnalités d’analyse de repas par photo ou par voix.</li>
-    <li><strong>Données d’achat :</strong> informations liées à l’abonnement, au statut premium et aux essais gratuits, traitées via l’App Store Apple, Google Play et RevenueCat.</li>
-    <li><strong>Données d’usage et diagnostics :</strong> événements d’utilisation, erreurs techniques et informations permettant d’améliorer l’application.</li>
-  </ul>
-  <h2>Utilisation des données</h2>
-  <p>Les données sont utilisées pour :</p>
-  <ul>
-    <li>Calculer vos objectifs caloriques et nutritionnels.</li>
-    <li>Afficher votre progression, vos repas, vos calories et votre historique.</li>
-    <li>Analyser les repas à partir d’une photo, d’un texte ou d’un audio.</li>
-    <li>Gérer l’accès premium, les abonnements et les essais gratuits.</li>
-    <li>Améliorer la stabilité, les performances et l’expérience utilisateur de l’application.</li>
-  </ul>
-  <h2>Photos et audios</h2>
-  <p>Lorsque vous utilisez une fonctionnalité d’analyse par photo ou par audio, le fichier peut être envoyé à un service externe afin d’identifier les aliments et estimer les informations nutritionnelles.</p>
-  <p>Ces fichiers sont utilisés uniquement pour fournir la fonctionnalité demandée. Nous ne les vendons pas.</p>
-  <h2>Services tiers</h2>
-  <p>Cali peut utiliser des services tiers, notamment :</p>
-  <ul>
-    <li>Apple App Store et Google Play, pour les achats et abonnements.</li>
-    <li>RevenueCat, pour gérer les abonnements et le statut premium.</li>
-    <li>PostHog, pour les statistiques d’usage et l’amélioration du produit.</li>
-    <li>Des services d’intelligence artificielle, pour analyser les repas à partir de photos, textes ou audios.</li>
-  </ul>
-  <p>Ces services peuvent traiter certaines données conformément à leurs propres politiques de confidentialité.</p>
-  <h2>Stockage des données</h2>
-  <p>Certaines données peuvent être stockées localement sur votre appareil afin de faire fonctionner l’application, par exemple vos repas, votre profil, votre objectif calorique et votre historique de poids.</p>
-  <p>Certaines données peuvent aussi être transmises à des services tiers uniquement lorsque cela est nécessaire au fonctionnement de l’application.</p>
-  <h2>Partage des données</h2>
-  <p>Nous ne vendons pas vos données personnelles.</p>
-  <p>Les données peuvent être partagées uniquement avec des prestataires techniques nécessaires au fonctionnement de l’application, par exemple pour l’analyse des repas, les abonnements, les statistiques ou le diagnostic d’erreurs.</p>
-  <h2>Sécurité</h2>
-  <p>Nous mettons en place des mesures raisonnables pour protéger les données traitées par l’application. Cependant, aucun système informatique ne peut garantir une sécurité absolue.</p>
-  <h2>Suppression des données</h2>
-  <p>Vous pouvez demander la suppression de vos données en nous contactant à :</p>
-  <p><a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a></p>
-  <p>Nous traiterons votre demande dans un délai raisonnable.</p>
-  <h2>Enfants</h2>
-  <p>Cali n’est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas volontairement de données personnelles auprès d’enfants de moins de 13 ans.</p>
-  <h2>Modifications</h2>
-  <p>Cette politique de confidentialité peut être mise à jour. En cas de changement important, la date de mise à jour sera modifiée en haut de cette page.</p>
-  <h2>Contact</h2>
-  <p>Pour toute question concernant cette politique de confidentialité :</p>
-  <p><a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a></p>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" id="btn-fr" aria-pressed="true">Français</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
+  </div>
+
+  <div data-lang="fr">
+    <h1>Politique de confidentialité de Cali</h1>
+    <p class="muted"><em>Dernière mise à jour : 1 juillet 2026</em></p>
+    <p>Cali (compteur de calories et régime) respecte votre vie privée. Cette politique explique quelles données peuvent être collectées, pourquoi elles sont utilisées et quels sont vos droits.</p>
+
+    <h2>Données collectées</h2>
+    <p>L’application peut collecter ou traiter les données suivantes :</p>
+    <ul>
+      <li><strong>Informations de profil :</strong> âge, sexe, taille, poids, objectif de poids, niveau d’activité, habitudes et objectif calorique.</li>
+      <li><strong>Données nutritionnelles :</strong> repas ajoutés, aliments, calories, protéines, glucides, lipides et historique des repas.</li>
+      <li><strong>Données de poids :</strong> pesées enregistrées et progression dans le temps.</li>
+      <li><strong>Photos ou audios :</strong> lorsque vous utilisez les fonctionnalités d’analyse de repas par photo ou par voix.</li>
+      <li><strong>Données d’achat :</strong> informations liées à l’abonnement, au statut premium et aux essais gratuits, traitées via l’App Store Apple, Google Play et RevenueCat.</li>
+      <li><strong>Données d’usage et diagnostics :</strong> événements d’utilisation, erreurs techniques et informations permettant d’améliorer l’application.</li>
+    </ul>
+
+    <h2>Utilisation des données</h2>
+    <ul>
+      <li>Calculer vos objectifs caloriques et nutritionnels.</li>
+      <li>Afficher votre progression, vos repas, vos calories et votre historique.</li>
+      <li>Analyser les repas à partir d’une photo, d’un texte ou d’un audio.</li>
+      <li>Gérer l’accès premium, les abonnements et les essais gratuits.</li>
+      <li>Améliorer la stabilité, les performances et l’expérience utilisateur de l’application.</li>
+    </ul>
+
+    <h2>Photos et audios</h2>
+    <p>Lorsque vous utilisez une fonctionnalité d’analyse par photo ou par audio, le fichier peut être envoyé à un service externe afin d’identifier les aliments et estimer les informations nutritionnelles.</p>
+    <p>Ces fichiers sont utilisés uniquement pour fournir la fonctionnalité demandée. Nous ne les vendons pas.</p>
+
+    <h2>Services tiers</h2>
+    <ul>
+      <li>Apple App Store et Google Play, pour les achats et abonnements.</li>
+      <li>RevenueCat, pour gérer les abonnements et le statut premium.</li>
+      <li>PostHog, pour les statistiques d’usage et l’amélioration du produit.</li>
+      <li>Des services d’intelligence artificielle, pour analyser les repas à partir de photos, textes ou audios.</li>
+    </ul>
+    <p>Ces services peuvent traiter certaines données conformément à leurs propres politiques de confidentialité.</p>
+
+    <h2>Stockage des données</h2>
+    <p>Cali n’a pas de compte utilisateur ni de base de données centrale. Vos repas, votre profil et votre historique de poids sont stockés localement sur votre appareil.</p>
+    <p>Certaines données techniques peuvent aussi être transmises à des services tiers uniquement lorsque cela est nécessaire au fonctionnement de l’application.</p>
+
+    <h2>Partage des données</h2>
+    <p>Nous ne vendons pas vos données personnelles.</p>
+    <p>Les données peuvent être partagées uniquement avec des prestataires techniques nécessaires au fonctionnement de l’application.</p>
+
+    <h2>Sécurité</h2>
+    <p>Nous mettons en place des mesures raisonnables pour protéger les données traitées par l’application. Cependant, aucun système informatique ne peut garantir une sécurité absolue.</p>
+
+    <h2>Suppression des données</h2>
+    <p>Cali ne dispose pas de serveur de sauvegarde utilisateur. Pour supprimer les données stockées sur votre appareil, désinstallez simplement l’application.</p>
+    <p>Les abonnements restent gérés par l’App Store Apple ou Google Play. Pour toute question : <a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a>.</p>
+
+    <h2>Enfants</h2>
+    <p>Cali n’est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas volontairement de données personnelles auprès d’enfants de moins de 13 ans.</p>
+
+    <h2>Modifications</h2>
+    <p>Cette politique de confidentialité peut être mise à jour. En cas de changement important, la date de mise à jour sera modifiée en haut de cette page.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a></p>
+    <p><a href="./support.html">Page d’assistance</a></p>
+  </div>
+
+  <div data-lang="en">
+    <h1>Cali Privacy Policy</h1>
+    <p class="muted"><em>Last updated: July 1, 2026</em></p>
+    <p>Cali (calorie counter and diet app) respects your privacy. This policy explains what data may be collected, why it is used, and what your rights are.</p>
+
+    <h2>Data we may collect</h2>
+    <p>The app may collect or process the following data:</p>
+    <ul>
+      <li><strong>Profile information:</strong> age, sex, height, weight, target weight, activity level, habits, and calorie goal.</li>
+      <li><strong>Nutrition data:</strong> logged meals, foods, calories, protein, carbs, fat, and meal history.</li>
+      <li><strong>Weight data:</strong> logged weigh-ins and progress over time.</li>
+      <li><strong>Photos or audio:</strong> when you use meal analysis by photo or voice.</li>
+      <li><strong>Purchase data:</strong> subscription, premium status, and free trials, processed via the Apple App Store, Google Play, and RevenueCat.</li>
+      <li><strong>Usage and diagnostics:</strong> usage events, technical errors, and information used to improve the app.</li>
+    </ul>
+
+    <h2>How we use data</h2>
+    <ul>
+      <li>Calculate your calorie and nutrition targets.</li>
+      <li>Show your progress, meals, calories, and history.</li>
+      <li>Analyze meals from a photo, text, or audio.</li>
+      <li>Manage premium access, subscriptions, and free trials.</li>
+      <li>Improve app stability, performance, and user experience.</li>
+    </ul>
+
+    <h2>Photos and audio</h2>
+    <p>When you use photo or audio analysis, the file may be sent to an external service to identify foods and estimate nutrition information.</p>
+    <p>These files are used only to provide the requested feature. We do not sell them.</p>
+
+    <h2>Third-party services</h2>
+    <ul>
+      <li>Apple App Store and Google Play, for purchases and subscriptions.</li>
+      <li>RevenueCat, to manage subscriptions and premium status.</li>
+      <li>PostHog, for usage analytics and product improvement.</li>
+      <li>AI services, to analyze meals from photos, text, or audio.</li>
+    </ul>
+    <p>These services may process some data under their own privacy policies.</p>
+
+    <h2>Data storage</h2>
+    <p>Cali has no user accounts and no central database. Your meals, profile, and weight history are stored locally on your device.</p>
+    <p>Some technical data may also be sent to third parties only when needed for the app to work.</p>
+
+    <h2>Data sharing</h2>
+    <p>We do not sell your personal data.</p>
+    <p>Data may be shared only with technical providers required to operate the app.</p>
+
+    <h2>Security</h2>
+    <p>We take reasonable measures to protect data processed by the app. However, no computer system can guarantee absolute security.</p>
+
+    <h2>Deleting your data</h2>
+    <p>Cali does not keep a user backup server. To delete data stored on your device, simply uninstall the app.</p>
+    <p>Subscriptions are managed by the Apple App Store or Google Play. For questions: <a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a>.</p>
+
+    <h2>Children</h2>
+    <p>Cali is not intended for children under 13. We do not knowingly collect personal data from children under 13.</p>
+
+    <h2>Changes</h2>
+    <p>This privacy policy may be updated. If there is an important change, the update date at the top of this page will change.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:benantonioli@outlook.fr">benantonioli@outlook.fr</a></p>
+    <p><a href="./support.html">Support page</a></p>
+  </div>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem("cali-lang");
+      var lang = stored === "en" || stored === "fr" ? stored : (navigator.language || "").toLowerCase().startsWith("fr") ? "fr" : "en";
+      function setLang(next) {
+        lang = next;
+        document.documentElement.lang = next;
+        localStorage.setItem("cali-lang", next);
+        var fr = document.getElementById("btn-fr");
+        var en = document.getElementById("btn-en");
+        fr.classList.toggle("active", next === "fr");
+        en.classList.toggle("active", next === "en");
+        fr.setAttribute("aria-pressed", next === "fr" ? "true" : "false");
+        en.setAttribute("aria-pressed", next === "en" ? "true" : "false");
+        document.title = next === "fr" ? "Politique de confidentialité — Cali" : "Privacy Policy — Cali";
+      }
+      document.getElementById("btn-fr").addEventListener("click", function () { setLang("fr"); });
+      document.getElementById("btn-en").addEventListener("click", function () { setLang("en"); });
+      setLang(lang);
+    })();
+  </script>
 </body>
 </html>
